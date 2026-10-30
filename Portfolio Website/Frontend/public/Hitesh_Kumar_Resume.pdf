@@ -1,0 +1,88 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1513 >>
+stream
+BT
+/F1 22 Tf
+50 740 Td
+(HITESH KUMAR) Tj
+/F1 12 Tf
+0 -24 Td
+(AI & Data Science Developer | B.Tech Undergraduate) Tj
+0 -18 Td
+(Email: hiteshkumar.techdev@gmail.com | GitHub: github.com/hiteshkumar-dev) Tj
+0 -28 Td
+/F1 14 Tf
+(SUMMARY) Tj
+/F1 10 Tf
+0 -16 Td
+(Passionate AI & Data Science student specialized in building machine learning pipelines,) Tj
+0 -14 Td
+(interactive web applications, and intelligent agent workflows.) Tj
+0 -24 Td
+/F1 14 Tf
+(EDUCATION) Tj
+/F1 10 Tf
+0 -16 Td
+(B.Tech in Artificial Intelligence & Data Science (2025 - 2029)) Tj
+0 -14 Td
+(Relevant Coursework: Data Structures, AI, Machine Learning, DBMS, Web Development) Tj
+0 -24 Td
+/F1 14 Tf
+(TECHNICAL SKILLS) Tj
+/F1 10 Tf
+0 -16 Td
+(Languages: Python, Java, JavaScript, SQL, HTML5, CSS3) Tj
+0 -14 Td
+(Frameworks & Libs: React, Node.js, Express, NumPy, Pandas, Matplotlib, Scikit-Learn) Tj
+0 -14 Td
+(Tools & Databases: MongoDB, Git, GitHub, VS Code, Postman, Vite) Tj
+0 -24 Td
+/F1 14 Tf
+(FEATURED PROJECTS) Tj
+/F1 11 Tf
+0 -16 Td
+(1. Krisora - Luxury E-Commerce Platform) Tj
+/F1 10 Tf
+0 -14 Td
+(- Engineered full-stack e-commerce experience with interactive catalog & responsive cart.) Tj
+/F1 11 Tf
+0 -18 Td
+(2. LeetCode Submissions Sync Tool) Tj
+/F1 10 Tf
+0 -14 Td
+(- Automated syncing of competitive coding solutions to GitHub repositories with detailed notes.) Tj
+/F1 11 Tf
+0 -18 Td
+(3. Real-Time Chat & Collaboration Suite) Tj
+/F1 10 Tf
+0 -14 Td
+(- Built low-latency messaging app with WebSockets, room management, and media sharing.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001806 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1876
+%%EOF

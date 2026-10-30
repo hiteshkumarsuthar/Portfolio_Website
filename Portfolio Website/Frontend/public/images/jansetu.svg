@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e2430"/>
+      <stop offset="100%" stop-color="#181d27"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Browser Frame -->
+  <rect width="1280" height="720" rx="16" fill="url(#bgGrad)"/>
+  
+  <!-- Browser Header -->
+  <rect width="1280" height="48" fill="#13161c"/>
+  <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+  <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+  <circle cx="68" cy="24" r="6" fill="#10B981"/>
+  
+  <!-- URL Bar -->
+  <rect x="140" y="10" width="1000" height="28" rx="6" fill="#1f242d"/>
+  <text x="160" y="29" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">https://jansetu-ai.gov.in/portal/schemes-explorer</text>
+  <rect x="1080" y="14" width="48" height="20" rx="4" fill="#374151"/>
+  <text x="1090" y="28" fill="#e5e7eb" font-family="sans-serif" font-size="10" font-weight="bold">ACTIVE</text>
+
+  <!-- Left Sidebar -->
+  <rect x="0" y="48" width="220" height="672" fill="#11151c"/>
+  <rect x="20" y="70" width="34" height="34" rx="8" fill="url(#primaryGrad)"/>
+  <text x="64" y="93" fill="#ffffff" font-family="sans-serif" font-size="18" font-weight="bold">JanSetu</text>
+  <text x="130" y="93" fill="#818CF8" font-family="sans-serif" font-size="12" font-weight="600">AI 2.0</text>
+
+  <!-- Sidebar Nav Items -->
+  <rect x="14" y="130" width="192" height="38" rx="8" fill="#1f2633"/>
+  <text x="50" y="154" fill="#818CF8" font-family="sans-serif" font-size="13" font-weight="600">AI Assistant</text>
+  <circle cx="32" cy="149" r="5" fill="#818CF8"/>
+
+  <text x="50" y="196" fill="#9ca3af" font-family="sans-serif" font-size="13">Eligibility Matcher</text>
+  <text x="50" y="238" fill="#9ca3af" font-family="sans-serif" font-size="13">Direct Benefits</text>
+  <text x="50" y="280" fill="#9ca3af" font-family="sans-serif" font-size="13">Document Vault</text>
+  <text x="50" y="322" fill="#9ca3af" font-family="sans-serif" font-size="13">Application Status</text>
+
+  <rect x="16" y="620" width="188" height="70" rx="10" fill="#1c222d"/>
+  <text x="30" y="645" fill="#e5e7eb" font-family="sans-serif" font-size="12" font-weight="bold">Citizen Helpline</text>
+  <text x="30" y="665" fill="#9ca3af" font-family="sans-serif" font-size="11">Toll-free AI Support 24/7</text>
+  <text x="30" y="680" fill="#10B981" font-family="sans-serif" font-size="11">● 1800-JAN-SETU</text>
+
+  <!-- Center Content: Chat & Recommendations -->
+  <!-- Top Stats Bar -->
+  <rect x="240" y="68" width="240" height="74" rx="10" fill="url(#cardGrad)" filter="url(#shadow)"/>
+  <text x="260" y="94" fill="#9ca3af" font-family="sans-serif" font-size="12">Matched Schemes</text>
+  <text x="260" y="125" fill="#ffffff" font-family="sans-serif" font-size="24" font-weight="bold">14 Eligible</text>
+
+  <rect x="500" y="68" width="240" height="74" rx="10" fill="url(#cardGrad)" filter="url(#shadow)"/>
+  <text x="520" y="94" fill="#9ca3af" font-family="sans-serif" font-size="12">Potential Grants</text>
+  <text x="520" y="125" fill="#10B981" font-family="sans-serif" font-size="24" font-weight="bold">₹2,50,000</text>
+
+  <rect x="760" y="68" width="240" height="74" rx="10" fill="url(#cardGrad)" filter="url(#shadow)"/>
+  <text x="780" y="94" fill="#9ca3af" font-family="sans-serif" font-size="12">Verification Status</text>
+  <text x="780" y="125" fill="#818CF8" font-family="sans-serif" font-size="24" font-weight="bold">100% Verified</text>
+
+  <rect x="1020" y="68" width="240" height="74" rx="10" fill="url(#cardGrad)" filter="url(#shadow)"/>
+  <text x="1040" y="94" fill="#9ca3af" font-family="sans-serif" font-size="12">Processing Time</text>
+  <text x="1040" y="125" fill="#F59E0B" font-family="sans-serif" font-size="24" font-weight="bold">&lt; 48 Hours</text>
+
+  <!-- Main AI Chat Container -->
+  <rect x="240" y="160" width="600" height="536" rx="12" fill="#161c24" stroke="#2d3748" stroke-width="1"/>
+  
+  <!-- Chat Header -->
+  <rect x="240" y="160" width="600" height="48" rx="12" fill="#1c232e"/>
+  <circle cx="266" cy="184" r="8" fill="#10B981"/>
+  <text x="286" y="189" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="bold">JanSetu Intelligence Core</text>
+  <text x="730" y="189" fill="#9ca3af" font-family="sans-serif" font-size="12">Model: Llama-3-70B</text>
+
+  <!-- Chat Messages -->
+  <!-- User Message -->
+  <rect x="420" y="226" width="400" height="60" rx="12" fill="#2d3748"/>
+  <text x="440" y="250" fill="#e2e8f0" font-family="sans-serif" font-size="13">I am an AI &amp; Data Science student looking for</text>
+  <text x="440" y="270" fill="#e2e8f0" font-family="sans-serif" font-size="13">innovation grants and national research support.</text>
+
+  <!-- AI Response -->
+  <rect x="260" y="304" width="560" height="150" rx="12" fill="#1f2937" stroke="#3b82f6" stroke-opacity="0.3"/>
+  <text x="280" y="332" fill="#818CF8" font-family="sans-serif" font-size="13" font-weight="bold">✦ JanSetu Assistant:</text>
+  <text x="280" y="358" fill="#d1d5db" font-family="sans-serif" font-size="13">Based on your educational background, here are the top verified schemes:</text>
+  <text x="280" y="386" fill="#e5e7eb" font-family="sans-serif" font-size="13">1. <tspan font-weight="bold" fill="#ffffff">National AI Student Innovation Fellowship</tspan> (Grant: ₹1.5L)</text>
+  <text x="280" y="412" fill="#e5e7eb" font-family="sans-serif" font-size="13">2. <tspan font-weight="bold" fill="#ffffff">Digital India Young Pioneer Incubation</tspan> (100% Subsidy)</text>
+  <text x="280" y="438" fill="#10B981" font-family="sans-serif" font-size="12" font-weight="bold">✓ 3 Documents auto-validated via DigiLocker API</text>
+
+  <!-- Chat Input -->
+  <rect x="260" y="626" width="560" height="52" rx="10" fill="#1f242d" stroke="#374151"/>
+  <text x="280" y="658" fill="#6b7280" font-family="sans-serif" font-size="13">Ask anything about criteria, deadlines, or auto-apply...</text>
+  <rect x="740" y="634" width="70" height="36" rx="6" fill="url(#primaryGrad)"/>
+  <text x="760" y="657" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">Send</text>
+
+  <!-- Right Panel: Matching Criteria & Details -->
+  <rect x="860" y="160" width="400" height="536" rx="12" fill="#161c24" stroke="#2d3748" stroke-width="1"/>
+  <text x="886" y="200" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="bold">Scheme Profile Match</text>
+  <text x="886" y="222" fill="#9ca3af" font-family="sans-serif" font-size="12">Real-time vector similarity score</text>
+
+  <!-- Circular progress mockup -->
+  <circle cx="1060" cy="300" r="54" fill="none" stroke="#2d3748" stroke-width="10"/>
+  <circle cx="1060" cy="300" r="54" fill="none" stroke="#10B981" stroke-width="10" stroke-dasharray="339.29" stroke-dashoffset="33.9" stroke-linecap="round"/>
+  <text x="1035" y="306" fill="#ffffff" font-family="sans-serif" font-size="24" font-weight="bold">94%</text>
+  <text x="1038" y="324" fill="#9ca3af" font-family="sans-serif" font-size="11">Match</text>
+
+  <!-- Checklist Cards -->
+  <rect x="886" y="380" width="348" height="64" rx="8" fill="#1f2633"/>
+  <circle cx="912" cy="412" r="10" fill="#10B981"/>
+  <text x="907" y="416" fill="#fff" font-family="sans-serif" font-size="11" font-weight="bold">✓</text>
+  <text x="936" y="405" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="600">Aadhaar &amp; Academic Records</text>
+  <text x="936" y="425" fill="#9ca3af" font-family="sans-serif" font-size="11">Linked &amp; Verified</text>
+
+  <rect x="886" y="458" width="348" height="64" rx="8" fill="#1f2633"/>
+  <circle cx="912" cy="490" r="10" fill="#10B981"/>
+  <text x="907" y="494" fill="#fff" font-family="sans-serif" font-size="11" font-weight="bold">✓</text>
+  <text x="936" y="483" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="600">AI / Tech Degree Specialization</text>
+  <text x="936" y="503" fill="#9ca3af" font-family="sans-serif" font-size="11">Qualified for Scheme Bracket C</text>
+
+  <!-- Action CTA -->
+  <rect x="886" y="626" width="348" height="52" rx="8" fill="url(#accentGrad)"/>
+  <text x="1000" y="658" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="bold">Auto-Submit Application →</text>
+</svg>

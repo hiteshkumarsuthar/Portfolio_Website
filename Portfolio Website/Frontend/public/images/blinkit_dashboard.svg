@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d12"/>
+      <stop offset="100%" stop-color="#121721"/>
+    </linearGradient>
+    <linearGradient id="bYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="bGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="chartFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.0"/>
+    </linearGradient>
+    <filter id="bShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Browser Frame -->
+  <rect width="1280" height="720" rx="16" fill="url(#bBg)"/>
+  
+  <!-- Browser Header -->
+  <rect width="1280" height="48" fill="#111620"/>
+  <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+  <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+  <circle cx="68" cy="24" r="6" fill="#10B981"/>
+  
+  <!-- URL Bar -->
+  <rect x="140" y="10" width="1000" height="28" rx="6" fill="#1c2331"/>
+  <text x="160" y="29" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">https://analytics.blinkit.internal/hub/north-sector-04/live-ops</text>
+  <rect x="1070" y="14" width="60" height="20" rx="4" fill="#0C831F"/>
+  <text x="1080" y="28" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold">● LIVE 10m</text>
+
+  <!-- Top App Navigation -->
+  <rect x="0" y="48" width="1280" height="60" fill="#151b27" stroke="#252e3e" stroke-width="1"/>
+  <!-- Blinkit Logo Mark -->
+  <rect x="24" y="60" width="36" height="36" rx="8" fill="#F7CA04"/>
+  <text x="32" y="86" fill="#111" font-family="sans-serif" font-size="22" font-weight="900">b</text>
+  <text x="70" y="84" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="800">blink<tspan fill="#10B981">it</tspan></text>
+  <text x="142" y="84" fill="#94a3b8" font-family="sans-serif" font-size="14">Ops Command Center</text>
+
+  <rect x="940" y="60" width="316" height="36" rx="8" fill="#1e2738"/>
+  <text x="956" y="83" fill="#cbd5e1" font-family="sans-serif" font-size="12">Dark Store: <tspan font-weight="bold" fill="#fff">Gurugram Hub #12 (DLF Ph-IV)</tspan></text>
+
+  <!-- Key Metrics Row (4 Cards) -->
+  <g transform="translate(24, 126)">
+    <!-- Card 1 -->
+    <rect width="292" height="100" rx="12" fill="#161e2b" stroke="#263143" stroke-width="1" filter="url(#bShadow)"/>
+    <text x="20" y="32" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="600">AVG DELIVERY TIME</text>
+    <text x="20" y="70" fill="#ffffff" font-family="sans-serif" font-size="32" font-weight="bold">8.4 <tspan font-size="18" fill="#94a3b8">mins</tspan></text>
+    <rect x="180" y="20" width="90" height="24" rx="12" fill="#064e3b"/>
+    <text x="194" y="36" fill="#34d399" font-family="sans-serif" font-size="11" font-weight="bold">↓ 1.2m vs SLA</text>
+
+    <!-- Card 2 -->
+    <rect x="316" width="292" height="100" rx="12" fill="#161e2b" stroke="#263143" stroke-width="1" filter="url(#bShadow)"/>
+    <text x="336" y="32" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="600">LIVE ORDERS IN TRANSIT</text>
+    <text x="336" y="70" fill="#FCD34D" font-family="sans-serif" font-size="32" font-weight="bold">1,842</text>
+    <rect x="500" y="20" width="86" height="24" rx="12" fill="#78350f"/>
+    <text x="514" y="36" fill="#fbbf24" font-family="sans-serif" font-size="11" font-weight="bold">Peak Hours</text>
+
+    <!-- Card 3 -->
+    <rect x="632" width="292" height="100" rx="12" fill="#161e2b" stroke="#263143" stroke-width="1" filter="url(#bShadow)"/>
+    <text x="652" y="32" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="600">ACTIVE RIDERS ON ROAD</text>
+    <text x="652" y="70" fill="#10B981" font-family="sans-serif" font-size="32" font-weight="bold">340</text>
+    <text x="730" y="70" fill="#64748b" font-family="sans-serif" font-size="14">/ 360 fleet</text>
+    <rect x="820" y="20" width="84" height="24" rx="12" fill="#064e3b"/>
+    <text x="834" y="36" fill="#34d399" font-family="sans-serif" font-size="11" font-weight="bold">94.4% Active</text>
+
+    <!-- Card 4 -->
+    <rect x="948" width="284" height="100" rx="12" fill="#161e2b" stroke="#263143" stroke-width="1" filter="url(#bShadow)"/>
+    <text x="968" y="32" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="600">ORDER FILL RATE</text>
+    <text x="968" y="70" fill="#ffffff" font-family="sans-serif" font-size="32" font-weight="bold">99.6%</text>
+    <rect x="1130" y="20" width="80" height="24" rx="12" fill="#064e3b"/>
+    <text x="1144" y="36" fill="#34d399" font-family="sans-serif" font-size="11" font-weight="bold">Optimal</text>
+  </g>
+
+  <!-- Main Chart Section: Order Velocity by Hour -->
+  <g transform="translate(24, 244)">
+    <rect width="808" height="450" rx="12" fill="#161e2b" stroke="#263143" stroke-width="1"/>
+    <text x="24" y="36" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="bold">Real-Time Hourly Dispatch &amp; Volume Velocity</text>
+    <text x="24" y="58" fill="#94a3b8" font-family="sans-serif" font-size="12">Showing 24-hour cycle spikes vs SLA delivery adherence</text>
+
+    <!-- Chart Grid -->
+    <line x1="60" y1="100" x2="760" y2="100" stroke="#1f293d" stroke-dasharray="4"/>
+    <text x="25" y="105" fill="#64748b" font-family="sans-serif" font-size="11">4,000</text>
+    <line x1="60" y1="180" x2="760" y2="180" stroke="#1f293d" stroke-dasharray="4"/>
+    <text x="25" y="185" fill="#64748b" font-family="sans-serif" font-size="11">3,000</text>
+    <line x1="60" y1="260" x2="760" y2="260" stroke="#1f293d" stroke-dasharray="4"/>
+    <text x="25" y="265" fill="#64748b" font-family="sans-serif" font-size="11">2,000</text>
+    <line x1="60" y1="340" x2="760" y2="340" stroke="#1f293d" stroke-dasharray="4"/>
+    <text x="25" y="345" fill="#64748b" font-family="sans-serif" font-size="11">1,000</text>
+
+    <!-- Area Chart Gradient -->
+    <path d="M 80,360 L 140,340 L 200,320 L 260,330 L 320,290 L 380,210 L 440,160 L 500,240 L 560,190 L 620,130 L 680,110 L 740,150 L 740,360 L 80,360 Z" fill="url(#chartFill)"/>
+    <!-- Line Chart Path -->
+    <path d="M 80,360 L 140,340 L 200,320 L 260,330 L 320,290 L 380,210 L 440,160 L 500,240 L 560,190 L 620,130 L 680,110 L 740,150" fill="none" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Green SLA Line -->
+    <path d="M 80,350 L 140,330 L 200,310 L 260,315 L 320,280 L 380,200 L 440,150 L 500,220 L 560,180 L 620,120 L 680,105 L 740,140" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 4"/>
+
+    <!-- Data Points -->
+    <circle cx="680" cy="110" r="5" fill="#F59E0B" stroke="#fff" stroke-width="2"/>
+    <rect x="635" y="65" width="90" height="32" rx="6" fill="#F59E0B"/>
+    <text x="645" y="85" fill="#000" font-family="sans-serif" font-size="11" font-weight="bold">3,890 orders</text>
+
+    <!-- Time Labels -->
+    <text x="75" y="380" fill="#64748b" font-family="sans-serif" font-size="11">06:00</text>
+    <text x="195" y="380" fill="#64748b" font-family="sans-serif" font-size="11">09:00</text>
+    <text x="315" y="380" fill="#64748b" font-family="sans-serif" font-size="11">12:00</text>
+    <text x="435" y="380" fill="#64748b" font-family="sans-serif" font-size="11">15:00</text>
+    <text x="555" y="380" fill="#64748b" font-family="sans-serif" font-size="11">18:00</text>
+    <text x="675" y="380" fill="#FCD34D" font-family="sans-serif" font-size="11" font-weight="bold">21:00 (Now)</text>
+  </g>
+
+  <!-- Right Side Column: Category Breakdown & Rider Efficiency -->
+  <g transform="translate(850, 244)">
+    <rect width="406" height="450" rx="12" fill="#161e2b" stroke="#263143" stroke-width="1"/>
+    <text x="24" y="36" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="bold">Top Velocity Categories</text>
+    <text x="24" y="58" fill="#94a3b8" font-family="sans-serif" font-size="12">Order distribution across dark store aisles</text>
+
+    <!-- Category 1: Fresh Produce & Dairy -->
+    <text x="24" y="105" fill="#e2e8f0" font-family="sans-serif" font-size="13" font-weight="600">Fresh Produce &amp; Dairy</text>
+    <text x="330" y="105" fill="#10B981" font-family="sans-serif" font-size="13" font-weight="bold">38%</text>
+    <rect x="24" y="115" width="358" height="8" rx="4" fill="#202a3a"/>
+    <rect x="24" y="115" width="136" height="8" rx="4" fill="#10B981"/>
+
+    <!-- Category 2: Instant Snacks & Munchies -->
+    <text x="24" y="165" fill="#e2e8f0" font-family="sans-serif" font-size="13" font-weight="600">Instant Snacks &amp; Munchies</text>
+    <text x="330" y="165" fill="#F59E0B" font-family="sans-serif" font-size="13" font-weight="bold">29%</text>
+    <rect x="24" y="175" width="358" height="8" rx="4" fill="#202a3a"/>
+    <rect x="24" y="175" width="104" height="8" rx="4" fill="#F59E0B"/>
+
+    <!-- Category 3: Cold Drinks & Juices -->
+    <text x="24" y="225" fill="#e2e8f0" font-family="sans-serif" font-size="13" font-weight="600">Beverages &amp; Cold Drinks</text>
+    <text x="330" y="225" fill="#60a5fa" font-family="sans-serif" font-size="13" font-weight="bold">18%</text>
+    <rect x="24" y="235" width="358" height="8" rx="4" fill="#202a3a"/>
+    <rect x="24" y="235" width="64" height="8" rx="4" fill="#60a5fa"/>
+
+    <!-- Category 4: Personal & Home Care -->
+    <text x="24" y="285" fill="#e2e8f0" font-family="sans-serif" font-size="13" font-weight="600">Personal &amp; Home Care</text>
+    <text x="330" y="285" fill="#a78bfa" font-family="sans-serif" font-size="13" font-weight="bold">15%</text>
+    <rect x="24" y="295" width="358" height="8" rx="4" fill="#202a3a"/>
+    <rect x="24" y="295" width="54" height="8" rx="4" fill="#a78bfa"/>
+
+    <!-- Live Hub Status Box -->
+    <rect x="24" y="340" width="358" height="86" rx="10" fill="#1c2536" stroke="#2d3a4e" stroke-width="1"/>
+    <circle cx="48" cy="370" r="8" fill="#10B981"/>
+    <text x="68" y="374" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="bold">Dark Store SLA Index: 99.1%</text>
+    <text x="68" y="396" fill="#94a3b8" font-family="sans-serif" font-size="11">Pick &amp; Pack time avg: 2.1 mins (Target &lt; 2.5m)</text>
+    <text x="68" y="414" fill="#10B981" font-family="sans-serif" font-size="11" font-weight="600">All 8 picking stations operating smoothly</text>
+  </g>
+</svg>
