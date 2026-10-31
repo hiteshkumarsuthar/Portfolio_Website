@@ -3,7 +3,7 @@ import axios from 'axios';
 /**
  * Axios instance configured for the Portfolio Backend API
  */
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:1111';
+export const API_BASE_URL = (import.meta.env.VITE_API_URL || 'https://portfolio-website-eyyy.onrender.com').replace(/\/+$/, '');
 
 export const apiClient = axios.create({
   baseURL: API_BASE_URL,

@@ -10,6 +10,7 @@ import {
   Loader2 
 } from '../components/Icons';
 import adminService from '../services/adminService';
+import { API_BASE_URL } from '../api/client';
 
 export default function SettingsView({ onNotify }) {
   const [settings, setSettings] = useState({
@@ -210,11 +211,15 @@ export default function SettingsView({ onNotify }) {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.84rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
                 <span>Backend API:</span>
-                <span style={{ color: '#10B981', fontWeight: 600 }}>http://localhost:1111 (Online)</span>
+                <span style={{ color: healthStatus ? '#10B981' : '#EF4444', fontWeight: 600 }}>
+                  {API_BASE_URL} ({healthStatus ? 'Online' : loading ? 'Checking...' : 'Offline'})
+                </span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
                 <span>MongoDB State:</span>
-                <span style={{ color: '#10B981', fontWeight: 600 }}>Connected (PortfolioWebsiteData)</span>
+                <span style={{ color: healthStatus?.dbConnected ? '#10B981' : '#EF4444', fontWeight: 600 }}>
+                  {healthStatus?.dbConnected ? 'Connected (PortfolioWebsiteData)' : 'Disconnected'}
+                </span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-secondary)' }}>
                 <span>Database Sync:</span>
