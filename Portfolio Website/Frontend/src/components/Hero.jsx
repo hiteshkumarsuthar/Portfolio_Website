@@ -83,18 +83,22 @@ export default function Hero({ data, contactData }) {
                 boxShadow: '0 8px 32px rgba(139, 0, 255, 0.35)',
               }}
             >
-              <img
-                src={personal.profileImage}
-                alt={personal.name}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  borderRadius: '50%',
-                  objectFit: 'cover',
-                  display: 'block',
-                  backgroundColor: '#16181F',
-                }}
-              />
+              {personal.profileImage ? (
+                <img
+                  src={personal.profileImage}
+                  alt={personal.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    borderRadius: '50%',
+                    objectFit: 'cover',
+                    display: 'block',
+                    backgroundColor: '#16181F',
+                  }}
+                />
+              ) : (
+                <div style={{ width: '100%', height: '100%', borderRadius: '50%', backgroundColor: '#16181F' }} />
+              )}
             </div>
 
             {/* Social Icons Header (Matches Reference: GitHub & LinkedIn above name) */}
