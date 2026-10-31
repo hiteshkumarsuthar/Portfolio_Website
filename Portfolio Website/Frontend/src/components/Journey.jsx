@@ -138,13 +138,17 @@ export default function Journey({ data }) {
           justify-content: flex-start;
         }
 
-        /* Timeline Node */
+        /* Timeline Node — absolutely centered on the row so it always sits
+           on the spine (both use the same 50% reference point). */
         .timeline-node-col {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          position: relative;
         }
 
         .timeline-node {
