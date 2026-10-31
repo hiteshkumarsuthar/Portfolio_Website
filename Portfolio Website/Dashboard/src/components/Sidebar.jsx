@@ -1,35 +1,35 @@
 import React from 'react';
-import { 
-  LayoutDashboard, 
-  Rocket, 
-  TrendingUp, 
-  Users, 
-  Box, 
-  ShoppingBag, 
-  FileText, 
-  Layers, 
-  FileBarChart, 
-  MessageSquare, 
-  Calendar, 
-  Folder, 
-  Copy, 
-  Settings, 
-  Shield, 
+import {
+  LayoutDashboard,
+  Rocket,
+  TrendingUp,
+  Users,
+  Box,
+  ShoppingBag,
+  FileText,
+  Layers,
+  FileBarChart,
+  MessageSquare,
+  Calendar,
+  Folder,
+  Copy,
+  Settings,
+  Shield,
   HelpCircle,
   ExternalLink,
   ChevronDown
 } from './Icons';
 
-export default function Sidebar({ 
-  currentSection, 
-  onSelectSection, 
-  collapsed, 
-  unreadMessagesCount = 0 
+export default function Sidebar({
+  currentSection,
+  onSelectSection,
+  collapsed,
+  unreadMessagesCount = 0
 }) {
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
     { id: 'live-site', label: 'Live Portfolio', icon: Rocket, badge: 'Live', badgeType: 'hot', isExternal: true },
-    { id: 'analytics', label: 'Analytics', icon: TrendingUp },
+    // { id: 'analytics', label: 'Analytics', icon: TrendingUp },
     { id: 'about', label: 'About Me', icon: Users },
     { id: 'projects', label: 'Projects', icon: Box },
     { id: 'skills', label: 'Technical Skills', icon: ShoppingBag },
@@ -49,7 +49,7 @@ export default function Sidebar({
 
   const handleItemClick = (item) => {
     if (item.isExternal) {
-      window.open('http://localhost:5175/', '_blank');
+      window.open('https://portfoliowebsite-frontend-ecru.vercel.app', '_blank');
       return;
     }
     onSelectSection(item.id);
