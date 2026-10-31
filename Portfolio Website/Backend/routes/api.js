@@ -24,20 +24,13 @@ if (!fs.existsSync(uploadsDir)) {
 }
 
 // Multer Storage Configuration
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, uploadsDir);
-  },
-  filename: function (req, file, cb) {
-    const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
-    const ext = path.extname(file.originalname);
-    cb(null, file.fieldname + "-" + uniqueSuffix + ext);
-  },
-});
+// Files are kept in memory and returned as base64 data URLs so they are persisted
+// in MongoDB (server disks on local/Render are wiped on shutdown/restart).
+const storage = multer.memoryStorage();
 
 const upload = multer({
   storage: storage,
-  limits: { fileSize: 10 * 1024 * 1024 }, // 10MB limit
+  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB limit (keeps documents under MongoDB's 16MB cap)
   fileFilter: (req, file, cb) => {
     const allowed = /jpeg|jpg|png|webp|svg|pdf/;
     const ext = path.extname(file.originalname).toLowerCase();
@@ -677,15 +670,13 @@ router.post("/upload", requireAuth, upload.single("file"), (req, res) => {
       return res.status(400).json({ success: false, error: "No file was uploaded." });
     }
 
-    const host = req.get("host");
-    const protocol = req.protocol;
-    const fileUrl = `${protocol}://${host}/uploads/${req.file.filename}`;
+    const fileUrl = `data:${req.file.mimetype};base64,${req.file.buffer.toString("base64")}`;
 
     return res.status(200).json({
       success: true,
       message: "File uploaded successfully.",
       url: fileUrl,
-      fileName: req.file.filename,
+      fileName: req.file.originalname,
       size: req.file.size,
       mimeType: req.file.mimetype,
     });

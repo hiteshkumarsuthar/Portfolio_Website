@@ -6,7 +6,7 @@ import Journey from './Journey';
 import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
-import apiClient from '../api/client';
+import apiClient, { API_BASE_URL } from '../api/client';
 import { portfolioData } from '../data/portfolioData';
 
 const PORTFOLIO_CACHE_KEY = 'portfolio_db_cache';
@@ -18,6 +18,14 @@ function readCache() {
   } catch {
     return null;
   }
+}
+
+// Uploaded files may be stored with the host they were uploaded from (e.g. http://localhost:1111).
+// Always resolve /uploads/... paths against the live backend instead.
+function resolveUploadUrl(url) {
+  if (!url || url.startsWith('data:')) return url;
+  const idx = url.indexOf('/uploads/');
+  return idx === -1 ? url : `${API_BASE_URL}${url.slice(idx)}`;
 }
 
 export default function PublicPortfolio({ theme, onToggleTheme }) {
@@ -48,7 +56,7 @@ export default function PublicPortfolio({ theme, onToggleTheme }) {
     ...portfolioData.personal,
     ...dbData.profile,
     profileImage: dbData.profile.profileImage || portfolioData.personal.profileImage,
-    resumeUrl: dbData.profile.resumeUrl || portfolioData.personal.resumeUrl,
+    resumeUrl: resolveUploadUrl(dbData.profile.resumeUrl) || portfolioData.personal.resumeUrl,
     socials: {
       ...portfolioData.personal.socials,
       ...(dbData.contact || {}),
