@@ -6,6 +6,19 @@ import { GithubIcon, LinkedinIcon, DownloadIcon } from './Icons';
 
 const FALLBACK_EMAIL = portfolioData.personal.socials.email;
 
+// Email saaf karta hai (agar "mailto:" pehle se laga ho to hata deta hai)
+const cleanEmail = (email) => (email || '').replace(/^mailto:/i, '').trim();
+
+// Click par Gmail compose naye tab me kholta hai, popup block ho to mailto fallback
+const openMail = (e, email) => {
+  e.preventDefault();
+  const clean = cleanEmail(email);
+  if (!clean) return;
+  const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(clean)}`;
+  const win = window.open(url, '_blank', 'noopener,noreferrer');
+  if (!win) window.location.href = `mailto:${clean}`;
+};
+
 export default function Hero({ data, contactData }) {
   const personal = {
     ...portfolioData.personal,
@@ -168,8 +181,10 @@ export default function Hero({ data, contactData }) {
                   <LinkedinIcon size={20} />
                 </a>
 
+                {/* FIXED: Mail button opens Gmail compose */}
                 <a
-                  href={`mailto:${personal.socials.email || FALLBACK_EMAIL}`}
+                  href={`mailto:${cleanEmail(personal.socials.email || FALLBACK_EMAIL)}`}
+                  onClick={(e) => openMail(e, personal.socials.email || FALLBACK_EMAIL)}
                   aria-label="Direct Email"
                   title="Email"
                   rel="noopener noreferrer"

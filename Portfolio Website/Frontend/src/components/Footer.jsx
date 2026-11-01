@@ -5,6 +5,19 @@ import { GithubIcon, LinkedinIcon, FileTextIcon } from './Icons';
 
 const FALLBACK_EMAIL = portfolioData.personal.socials.email;
 
+// Email saaf karta hai (agar "mailto:" pehle se laga ho to hata deta hai)
+const cleanEmail = (email) => (email || '').replace(/^mailto:/i, '').trim();
+
+// Click par Gmail compose naye tab me kholta hai, popup block ho to mailto fallback
+const openMail = (e, email) => {
+  e.preventDefault();
+  const clean = cleanEmail(email);
+  if (!clean) return;
+  const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(clean)}`;
+  const win = window.open(url, '_blank', 'noopener,noreferrer');
+  if (!win) window.location.href = `mailto:${clean}`;
+};
+
 export default function Footer({ profileData: prof, contactData: cont }) {
   const personal = {
     ...portfolioData.personal,
@@ -90,9 +103,12 @@ export default function Footer({ profileData: prof, contactData: cont }) {
           <LinkedinIcon size={22} />
         </a>
 
+        {/* FIXED: Mail button opens Gmail compose */}
         <a
-          href={`mailto:${personal.socials.email || FALLBACK_EMAIL}`}
+          href={`mailto:${cleanEmail(personal.socials.email || FALLBACK_EMAIL)}`}
+          onClick={(e) => openMail(e, personal.socials.email || FALLBACK_EMAIL)}
           aria-label="Email"
+          title="Email"
           rel="noopener noreferrer"
           style={{
             color: 'var(--text-primary)',
@@ -135,7 +151,7 @@ export default function Footer({ profileData: prof, contactData: cont }) {
         </a>
       </div>
 
-      {/* Copyright text matching Screenshot 1: "A portfolio designed & built by Hitesh Kumar with 💜" */}
+      {/* Copyright text matching Screenshot 1 */}
       <p
         style={{
           fontSize: '0.88rem',
