@@ -228,7 +228,7 @@ export default function Projects({ data }) {
                     onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--accent-purple)')}
                   >
                     {/* <span>Read Case Study</span> */}
-                    <ArrowRight size={14} />
+                    {/* <ArrowRight size={14} /> */}
                   </button>
                 </div>
               </div>
