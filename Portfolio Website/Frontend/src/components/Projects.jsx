@@ -227,7 +227,7 @@ export default function Projects({ data }) {
                     onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-magenta)')}
                     onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--accent-purple)')}
                   >
-                    <span>Read Case Study</span>
+                    {/* <span>Read Case Study</span> */}
                     <ArrowRight size={14} />
                   </button>
                 </div>
