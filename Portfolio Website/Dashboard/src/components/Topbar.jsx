@@ -1,26 +1,26 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { 
-  Menu, 
-  Search, 
-  Moon, 
-  Sun, 
-  Maximize2, 
-  Minimize2, 
-  Bell, 
-  ChevronDown, 
-  ExternalLink, 
-  User, 
-  LogOut, 
-  CheckCircle2, 
-  ShieldCheck 
+import {
+  Menu,
+  Search,
+  Moon,
+  Sun,
+  Maximize2,
+  Minimize2,
+  Bell,
+  ChevronDown,
+  ExternalLink,
+  User,
+  LogOut,
+  CheckCircle2,
+  ShieldCheck
 } from './Icons';
 
-export default function Topbar({ 
-  theme, 
-  onToggleTheme, 
-  sidebarCollapsed, 
-  onToggleSidebar, 
-  adminUser, 
+export default function Topbar({
+  theme,
+  onToggleTheme,
+  sidebarCollapsed,
+  onToggleSidebar,
+  adminUser,
   onLogout,
   unreadCount = 0,
   onNavigateSection,
@@ -44,11 +44,11 @@ export default function Topbar({
 
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch(() => {});
+      document.documentElement.requestFullscreen().catch(() => { });
       setIsFullscreen(true);
     } else {
       if (document.exitFullscreen) {
-        document.exitFullscreen().catch(() => {});
+        document.exitFullscreen().catch(() => { });
         setIsFullscreen(false);
       }
     }
@@ -92,7 +92,7 @@ export default function Topbar({
             <span style={{ color: '#FFFFFF', fontWeight: 800, fontSize: '1.05rem', fontFamily: 'sans-serif' }}>M</span>
           </div>
           <span style={{ fontSize: '1.25rem', fontWeight: 800, letterSpacing: '-0.02em', color: 'var(--text-primary)' }}>
-            Metis
+            Hitesh
           </span>
         </div>
 
