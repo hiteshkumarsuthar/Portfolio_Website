@@ -42,7 +42,7 @@ export default function Sidebar({
   ];
 
   const adminItems = [
-    { id: 'settings', label: 'Settings', icon: Settings },
+    // { id: 'settings', label: 'Settings', icon: Settings },
     { id: 'security', label: 'Security', icon: Shield },
     { id: 'support', label: 'Help & Support', icon: HelpCircle },
   ];
