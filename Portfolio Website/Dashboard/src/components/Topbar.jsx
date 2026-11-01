@@ -89,7 +89,7 @@ export default function Topbar({
               boxShadow: '0 2px 10px rgba(37, 99, 235, 0.4)',
             }}
           >
-            <span style={{ color: '#FFFFFF', fontWeight: 800, fontSize: '1.05rem', fontFamily: 'sans-serif' }}>M</span>
+            <span style={{ color: '#FFFFFF', fontWeight: 800, fontSize: '1.05rem', fontFamily: 'sans-serif' }}>H</span>
           </div>
           <span style={{ fontSize: '1.25rem', fontWeight: 800, letterSpacing: '-0.02em', color: 'var(--text-primary)' }}>
             Hitesh
