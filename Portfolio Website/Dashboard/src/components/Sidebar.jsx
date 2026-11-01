@@ -43,13 +43,13 @@ export default function Sidebar({
 
   const adminItems = [
     // { id: 'settings', label: 'Settings', icon: Settings },
-    { id: 'security', label: 'Security', icon: Shield },
+    { id: 'security', label: 'Security & Settings', icon: Shield },
     { id: 'support', label: 'Help & Support', icon: HelpCircle },
   ];
 
   const handleItemClick = (item) => {
     if (item.isExternal) {
-      window.open('https://portfoliowebsite-frontend-ecru.vercel.app', '_blank');
+      window.open('https://hitesh-kumar-suthar.vercel.app/', '_blank');
       return;
     }
     onSelectSection(item.id);
