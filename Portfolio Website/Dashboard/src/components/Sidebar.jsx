@@ -37,7 +37,7 @@ export default function Sidebar({
     // { id: 'education', label: 'Education & Certs', icon: Layers, hasSubmenu: true },
     // { id: 'achievements', label: 'Achievements', icon: FileBarChart },
     { id: 'messages', label: 'Messages', icon: MessageSquare, badge: unreadMessagesCount > 0 ? unreadMessagesCount : null, badgeType: 'counter' },
-    { id: 'resume', label: 'Resume & Files', icon: Folder },
+    // { id: 'resume', label: 'Resume & Files', icon: Folder },
     { id: 'contact', label: 'Contact Info', icon: Copy, hasSubmenu: true },
   ];
 
