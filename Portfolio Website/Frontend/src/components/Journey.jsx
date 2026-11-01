@@ -67,10 +67,12 @@ export default function Journey({ data }) {
 
                 {/* Central Timeline Node (Purple Circle with Icon) */}
                 <div className="timeline-node-col">
-                  <div className="timeline-node">
-                    {getIcon(item.icon)}
+                  <div className="timeline-node-anchor">
+                    <div className="timeline-node">
+                      {getIcon(item.icon)}
+                    </div>
+                    <span className="timeline-date-label">{item.period}</span>
                   </div>
-                  <span className="timeline-date-label">{item.period}</span>
                 </div>
 
                 {/* Empty Balancing Column for Desktop Alternating Grid */}
@@ -140,15 +142,25 @@ export default function Journey({ data }) {
 
         /* Timeline Node — sits in grid-column 2 (the 80px centre slot that is
            already at exactly left: 50% of the wrapper, same as the spine).
-           z-index:5 with position:relative brings it in front of the cards. */
+           align-self:stretch fills the full card height so justify-content:center
+           truly vertically centres the icon for every card, including row-right. */
         .timeline-node-col {
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          align-self: center;
+          align-self: stretch;
           position: relative;
           z-index: 5;
+        }
+
+        /* Inner anchor keeps the date label positioned relative to the icon
+           circle itself, not the stretched column wrapper. */
+        .timeline-node-anchor {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .timeline-node {
