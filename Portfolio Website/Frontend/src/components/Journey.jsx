@@ -146,6 +146,7 @@ export default function Journey({ data }) {
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          align-self: center;
           position: relative;
           z-index: 5;
         }

@@ -4,6 +4,8 @@ import { portfolioData } from '../data/portfolioData';
 import { Mail, ArrowUpRight, ChevronDown } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, DownloadIcon } from './Icons';
 
+const FALLBACK_EMAIL = portfolioData.personal.socials.email;
+
 export default function Hero({ data, contactData }) {
   const personal = {
     ...portfolioData.personal,
@@ -167,9 +169,10 @@ export default function Hero({ data, contactData }) {
                 </a>
 
                 <a
-                  href={`mailto:${personal.socials.email}`}
+                  href={`mailto:${personal.socials.email || FALLBACK_EMAIL}`}
                   aria-label="Direct Email"
                   title="Email"
+                  rel="noopener noreferrer"
                   style={{
                     color: 'var(--text-primary)',
                     display: 'flex',

@@ -3,6 +3,8 @@ import { portfolioData } from '../data/portfolioData';
 import { Mail, ArrowUp, Heart } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, FileTextIcon } from './Icons';
 
+const FALLBACK_EMAIL = portfolioData.personal.socials.email;
+
 export default function Footer({ profileData: prof, contactData: cont }) {
   const personal = {
     ...portfolioData.personal,
@@ -89,8 +91,9 @@ export default function Footer({ profileData: prof, contactData: cont }) {
         </a>
 
         <a
-          href={`mailto:${personal.socials.email}`}
+          href={`mailto:${personal.socials.email || FALLBACK_EMAIL}`}
           aria-label="Email"
+          rel="noopener noreferrer"
           style={{
             color: 'var(--text-primary)',
             transition: 'transform var(--transition-fast), color var(--transition-fast)',
