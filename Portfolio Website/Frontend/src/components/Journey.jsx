@@ -83,7 +83,7 @@ export default function Journey({ data }) {
         </div>
       </div>
 
-      {/* Scoped CSS for the Alternating Timeline (Faithful to Reference Screenshot 4) */}
+      {/* Scoped CSS for the Alternating Timeline */}
       <style>{`
         .timeline-wrapper {
           position: relative;
@@ -109,10 +109,19 @@ export default function Journey({ data }) {
         .timeline-row {
           display: grid;
           grid-template-columns: 1fr 80px 1fr;
+          grid-template-rows: auto;
           align-items: center;
           margin-bottom: 56px;
           position: relative;
           z-index: 2;
+        }
+
+        /* FIX: every item is pinned to grid-row 1, so the node can never
+           fall into a second row below the card (this was the bug on row-right). */
+        .timeline-row > .timeline-card-col,
+        .timeline-row > .timeline-node-col,
+        .timeline-row > .timeline-empty-col {
+          grid-row: 1;
         }
 
         /* Alternating Order */
@@ -140,10 +149,7 @@ export default function Journey({ data }) {
           justify-content: flex-start;
         }
 
-        /* Timeline Node — sits in grid-column 2 (the 80px centre slot that is
-           already at exactly left: 50% of the wrapper, same as the spine).
-           align-self:stretch fills the full card height so justify-content:center
-           truly vertically centres the icon for every card, including row-right. */
+        /* Node column: stretches to full card height, icon centred vertically */
         .timeline-node-col {
           display: flex;
           flex-direction: column;
@@ -154,8 +160,6 @@ export default function Journey({ data }) {
           z-index: 5;
         }
 
-        /* Inner anchor keeps the date label positioned relative to the icon
-           circle itself, not the stretched column wrapper. */
         .timeline-node-anchor {
           position: relative;
           display: flex;
@@ -183,6 +187,8 @@ export default function Journey({ data }) {
 
         .timeline-date-label {
           position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
           white-space: nowrap;
           font-size: 0.82rem;
           color: var(--text-muted);
@@ -190,17 +196,15 @@ export default function Journey({ data }) {
           letter-spacing: 0.02em;
         }
 
-        /* Position Date Labels next to node */
+        /* Position Date Labels next to node, vertically centred with icon */
         .timeline-row.row-left .timeline-date-label {
           left: calc(100% + 16px);
-          top: 14px;
         }
         .timeline-row.row-right .timeline-date-label {
           right: calc(100% + 16px);
-          top: 14px;
         }
 
-        /* White Info Card (Matches Reference Screenshot 4) */
+        /* White Info Card */
         .timeline-card {
           background-color: #FFFFFF;
           color: #171717;
@@ -289,6 +293,7 @@ export default function Journey({ data }) {
             position: absolute;
             left: 2px;
             top: 14px;
+            align-self: auto;
           }
 
           .timeline-node {
